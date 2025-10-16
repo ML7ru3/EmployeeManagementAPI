@@ -1,0 +1,49 @@
+@EmployeeManagementAPI_HostAddress = http://localhost:5241
+
+### Get weather forecast
+GET {{EmployeeManagementAPI_HostAddress}}/weatherforecast
+Accept: application/json
+
+###
+
+### Get all employees
+GET {{EmployeeManagementAPI_HostAddress}}/employee/get
+Accept: application/json
+
+###
+
+### 
+DELETE {{EmployeeManagementAPI_HostAddress}}/employee/delete/2
+Accept: application/json
+
+###
+
+### 
+PUT {{EmployeeManagementAPI_HostAddress}}/employee/update
+Content-Type: application/json
+
+{
+  "employeeId": 1,
+  "name": "NguyenQuangTrung",
+  "email": "beastmaster6666666666@gmail.com",
+  "position": "Senior",
+  "hireDate": "2025-10-06",
+  "departmentId": 1
+}
+
+###
+
+### 
+POST {{EmployeeManagementAPI_HostAddress}}/employee/insert
+Content-Type: application/json
+
+{
+  "employeeId": 2,
+  "name": "BuiHoangViet",
+  "email": "quangtrung3112004@gmail.com",
+  "position": "Senior",
+  "hireDate": "2025-10-06",
+  "departmentId": 1
+}
+
+###

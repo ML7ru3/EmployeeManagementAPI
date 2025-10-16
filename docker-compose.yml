@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql_server
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Ml7ru3@123
+      - MSSQL_PID=Express  # Optional: Use "Developer" or "Express"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    restart: unless-stopped
+
+volumes:
+  mssql_data:
